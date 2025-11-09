@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="-1 0 99.720833 99.720833"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="favicon.svg"
+   width="99.720833"
+   height="99.720833"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:export-filename="favicon.png"
+   inkscape:export-xdpi="128"
+   inkscape:export-ydpi="128"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="5.38"
+     inkscape:cx="28.252788"
+     inkscape:cy="39.312268"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="99.720833"
+       height="99.720833"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs3">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#1e1e1e;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <!-- Logo gradient -->
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="-1"
+       y1="49.860416"
+       x2="98.720833"
+       y2="49.860416"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <!-- Abstract 'C' Icon - scaled and centered to fit borders -->
+  <circle
+     style="fill:url(#linearGradient2);stroke-width:1.50841;fill-opacity:1;fill-rule:nonzero"
+     id="path2"
+     cx="48.860416"
+     cy="49.860416"
+     r="49.860416" />
+  <g
+     transform="matrix(0.6015301,0,0,0.6015301,46.153531,49.860416)"
+     id="g6"
+     style="fill:#ffffff">
+    <!-- Outer arc -->
+    <path
+       d="m 30,-30 a 37.5,37.5 0 1 0 0,60 L 18.75,18.75 a 22.5,22.5 0 1 1 0,-37.5 z"
+       fill="url(#logoGradient)"
+       opacity="0.95"
+       id="path3"
+       style="fill:#ffffff" />
+    <!-- Inner geometric element -->
+    <rect
+       x="15"
+       y="-6"
+       width="18.75"
+       height="2.25"
+       fill="url(#logoGradient)"
+       opacity="0.8"
+       rx="1.125"
+       id="rect3"
+       style="fill:#ffffff" />
+    <rect
+       x="15"
+       y="-1.5"
+       width="22.5"
+       height="2.25"
+       fill="url(#logoGradient)"
+       opacity="0.9"
+       rx="1.125"
+       id="rect4"
+       style="fill:#ffffff" />
+    <rect
+       x="15"
+       y="3"
+       width="15"
+       height="2.25"
+       fill="url(#logoGradient)"
+       opacity="0.7"
+       rx="1.125"
+       id="rect5"
+       style="fill:#ffffff" />
+    <!-- Tech accent dots -->
+    <circle
+       cx="37.5"
+       cy="-11.25"
+       r="1.5"
+       fill="url(#logoGradient)"
+       opacity="0.6"
+       id="circle5"
+       style="fill:#ffffff" />
+    <circle
+       cx="37.5"
+       cy="11.25"
+       r="1.125"
+       fill="url(#logoGradient)"
+       opacity="0.4"
+       id="circle6"
+       style="fill:#ffffff" />
+  </g>
+</svg>

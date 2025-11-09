@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+  
+  /* Global colors */
+  :root {
+    --blue: #3b82f6;
+  }
+  
+  /* Light theme */
+  :root.light {
+    --background: #ffffff;
+    --foreground: #000000;
+    --foreground-secondary: #777777;
+    --muted: #f2f2f2;
+    --borders: #d5d5d5;
+  }
+  
+  /* Dark theme */
+  :root.dark {
+    --background: #000000;
+    --foreground: #ffffff;
+    --foreground-secondary: #888888;
+    --muted: #0d0d0d;
+    --borders: #2A2A2A;
+  }
+  
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-poppins), system-ui, poppins;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Geometric background animation */
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 cursor-pointer;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200 cursor-pointer;
+  }
+  
+  .btn-success {
+    @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 cursor-pointer;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 cursor-pointer;
+  }
+  
+  .btn-sm {
+    @apply py-1 px-2 text-sm;
+  }
+  
+  .card {
+    background-color: var(--background);
+    @apply rounded-lg shadow-md border transition-colors duration-200;
+    border-color: var(--borders);
+  }
+  
+  .item {
+    @apply flex items-center justify-between p-3 border-b transition-colors duration-150;
+    border-color: var(--borders);
+  }
+
+  .item:last-child {
+    @apply border-b-0;
+  }
+
+  .title-header {
+    @apply font-bold text-lg mb-2 mt-4 first:mt-0;
+    color: var(--foreground);
+  }
+
+  .item-list {
+    @apply space-y-1 mb-4;
+  }
+
+  .item-name {
+    color: var(--foreground);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    line-height: 1.2;
+  }
+
+  /* Navigation link colors */
+  .nav-link-active {
+    color: var(--foreground) !important;
+  }
+
+  .nav-link-inactive {
+    color: var(--foreground-secondary) !important;
+  }
+
+  /* Custom scrollbar styling */
+  .overflow-y-auto::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .overflow-y-auto::-webkit-scrollbar-track {
+    background: var(--muted);
+    border-radius: 4px;
+  }
+
+  .overflow-y-auto::-webkit-scrollbar-thumb {
+    background: var(--borders);
+    border-radius: 4px;
+    transition: background 0.2s ease;
+  }
+
+  .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background: var(--foreground-secondary);
+  }
+
+  /* Firefox scrollbar */
+  .overflow-y-auto {
+    scrollbar-width: thin;
+    scrollbar-color: var(--borders) var(--muted);
+  }
+
+  /* Checkbox styling */
+  input[type="checkbox"] {
+    border-radius: 0.05rem;
+    accent-color: var(--blue);
+  }
+}
+
+/* Output list height - mobile only */
+@media (max-width: 767px) {
+  [data-scrollable-area] {
+    height: var(--custom-height, auto) !important;
+    max-height: var(--custom-height, auto) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  [data-scrollable-area] {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+  
+  /* Override absolute positioning on desktop */
+  [data-output-container].output-positioned {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    height: auto !important;
+  }
+}
+
+/* Mobile-only absolute positioning for output container */
+@media (max-width: 767px) {
+  [data-output-container].output-positioned {
+    position: absolute;
+    top: var(--output-top, auto);
+    left: 0;
+    right: 0;
+  }
+  
+  /* Input container maxHeight only on mobile */
+  [data-input-container] {
+    max-height: var(--input-max-height, none);
+  }
+}
+
+@media (min-width: 768px) {
+  /* Clear input container maxHeight on desktop and force full height */
+  [data-input-container] {
+    max-height: none !important;
+    flex: 1 1 0 !important;
+  }
+}
