@@ -1,13 +1,13 @@
 # Listing App by Codifyne
 
-A modern web application for managing and organizing item collections. Built with Next.js, TypeScript, and Tailwind CSS.
+A simple and modern web application for managing and organizing item collections. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- **Configurable Flavor Database**: Import your own brands and flavors through the settings modal
-- **Default Placeholder**: Start with a simple placeholder template (10 brands, 10 items each)
-- **Interactive Selection**: Add/remove flavors with +/- buttons
-- **Smart Highlighting**: Selected flavors are highlighted in the input list
+- **Configurable Item Database**: Import your own items through the settings modal
+- **Default Placeholder**: Start with a simple placeholder template (10 titles, 10 items each)
+- **Interactive Selection**: Add/remove items with +/- buttons
+- **Smart Highlighting**: Selected items are highlighted in the input list
 - **Flexible Sorting**: Sort alphabetically A-Z or Z-A
 - **Easy Copy**: Copy your selected list to clipboard with proper formatting
 - **Responsive Design**: Works on desktop and mobile devices
@@ -47,22 +47,22 @@ This app is ready for deployment on Vercel:
 
 ## Usage
 
-1. **Configure Flavors**: Click the settings icon to open the configuration modal
-   - Enter your brands and flavors in the text box
-   - Format: Brand name on first line, followed by flavor names (one per line)
-   - Separate brands with blank lines
-   - Click "Import Flavors" to apply your configuration
-2. **Browse Flavors**: Use the left panel to browse all available flavors
-3. **Add Flavors**: Click the `+` button next to any flavor to add it to your list
-4. **Remove Flavors**: Click the `-` button to remove flavors from your list
-5. **Sort Options**: Use the A-Z / Z-A buttons to change sorting order
-6. **Copy List**: Click "Copy List" to copy your selected flavors to clipboard
+1. **Configure Items**: Click the settings icon to open the configuration modal
+   - Replace the placeholder with your items in the text box
+   - Format: Title name on first line, followed by item names (one per line)
+   - Separate titles with blank lines
+   - Click "Import Items" to apply your configuration
+2. **Browse Items**: Use the left panel to browse all available items
+3. **Add Items**: Click the `+` button next to any item to add it to your list
+4. **Remove Items**: Click the `-` button to remove items from your list
+5. **Sort Options**: Use the Sort button to alphabetically sort items within each title
+6. **Copy List**: Click "Copy List" to copy your selected items to clipboard
 7. **Clear All**: Use "Clear All" to start over
 
 ## Output Format
 
-- Single items: `Flavor Name`
-- Multiple items: `# Flavor Name`
+- Single items: `Item Name`
+- Multiple items: `# Item Name`
 
 ## Technology Stack
 
@@ -78,14 +78,14 @@ This app is ready for deployment on Vercel:
 ├── app/
 │   ├── context/
 │   │   └── ThemeContext.tsx  # Theme management context
-│   ├── globals.css          # Global styles and Tailwind components
-│   ├── layout.tsx          # Root layout component
-│   └── page.tsx            # Main application page
-├── start-local.bat         # Windows batch file for easy startup
-├── vercel.json            # Vercel deployment configuration
-└── package.json           # Dependencies and scripts
+│   ├── globals.css           # Global styles and Tailwind components
+│   ├── layout.tsx            # Root layout component
+│   └── page.tsx              # Main application page
+├── start-local.bat           # Windows batch file for easy startup
+├── vercel.json               # Vercel deployment configuration
+└── package.json              # Dependencies and scripts
 ```
 
 ## Configuration
 
-All flavor data is stored in your browser's localStorage. The app starts with a default placeholder template (10 brands, 10 items each) that you can customize through the settings modal. Your configuration is automatically saved and persists across sessions.
+All item data is stored in your browser's localStorage. The app starts with a default placeholder template (10 titles, 10 items each) that you can customize through the settings modal. Your configuration is automatically saved and persists across sessions.
